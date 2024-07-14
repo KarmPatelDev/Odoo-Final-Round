@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/Auth";
 import { toast } from 'react-toastify';
 import Layout from "../../components/layouts/Layout";
-import "../../styles/auth.css";
+import './Login-Register.css'; // Import the CSS file
 
 const Login = () => {
 
@@ -42,9 +42,9 @@ const Login = () => {
     };
 
     return (
+        <Layout title={'Login'}>
             <div className="login">
-                <div className="login__form" >
-                <form onSubmit={handleSubmit}>
+                <form className="login__form" onSubmit={handleSubmit}>
                     <h4 className="login__title">Login Page</h4>
                     <div className="login__content">
                         <div className="login__box">
@@ -54,20 +54,17 @@ const Login = () => {
                             <input type="password" className="login__input" placeholder="Enter Your Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                         </div>
                     </div>
-                    <button type="submit" className="login__button">Login</button>
-
-                   
-                </form>
-                <div className="login__forgot">
-                        <Link to="/forgot-password" className="for-btn">Forgot Password</Link>
+                    <button type="submit" className="login__button btn btn-primary">Login</button>
+                    <div className="login__forgot">
+                        <button type="button" className="" onClick={() => navigate("/forgot-password")}>Forgot Password</button>
                     </div>
-                    
-                <div className="login__register">
-                    <p>If You Don't Have An Account?</p>
-                    <button type="button" className="btn btn-secondary" onClick={() => navigate("/register")}>Register</button>
-                </div>
-                </div>
+                    <div className="login__register">
+                        <p>Not registered yet?</p>
+                        <button type="button" className="btn btn-secondary" onClick={() => navigate("/register")}>Register</button>
+                    </div>
+                </form>
             </div>
+        </Layout>
     );
 };
 

@@ -10,23 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.24.1",
-    "react-toastify": "^10.0.5",
-    "bootstrap": "^4.6.0",
-    "moment": "^2.29.1",
-    "react-bootstrap": "^1.6.1",
-    "react-datepicker": "^4.2.0",
-    "react-datetime": "^3.0.4",
-    "react-multi-select-component": "^4.0.3",
-    "react-scripts": "4.0.3",
-    "semantic-ui-react": "^2.0.3",
-    "web-vitals": "^1.0.1"
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

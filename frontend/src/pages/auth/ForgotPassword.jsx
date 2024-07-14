@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from 'react-toastify';
 import Layout from "../../components/layouts/Layout";
+import './ForgotPassword.css'; // Import the CSS file
 
 const ForgotPassword = () => {
-
     const [emailId, setEmailId] = useState("");
     const [answer, setAnswer] = useState("");
     const [newPassword, setNewPassword] = useState("");
@@ -17,17 +17,15 @@ const ForgotPassword = () => {
         e.preventDefault();
         
         try {
-            const res = await axios.post(`http://localhost:8081/api/v1/auth/forgot-password`, {emailId, answer, newPassword});
+            const res = await axios.post(`http://localhost:8081/api/v1/auth/forgot-password`, { emailId, answer, newPassword });
             
-            if(res.data.success){  
+            if (res.data.success) {  
                 toast.success(res.data.message);
                 navigate("/login");
-            }
-            else{
+            } else {
                 toast.error(res.data.message);
             }
-        }
-        catch(error) {
+        } catch (error) {
             console.log(error);
             toast.error("Something Went Wrong.");
         }
@@ -37,17 +35,38 @@ const ForgotPassword = () => {
         <Layout title={'Forgot Password'}>
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
-                <h4>Reset Password</h4>
-                <div className="form-group my-2">
-                    <input type="email" className="form-control" placeholder="Enter Your Email" value={emailId} onChange={(e) => setEmailId(e.target.value)} required/>
-                </div>
-                <div className="form-group my-2">
-                    <input type="text" className="form-control" placeholder="Enter 4 Digit PIN" value={answer} onChange={(e) => setAnswer(e.target.value)} required/>
-                </div>
-                <div className="form-group my-2">
-                    <input type="password" className="form-control" placeholder="Enter New Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required/>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button> 
+                    <h4>Reset Password</h4>
+                    <div className="form-group my-2">
+                        <input
+                            type="email"
+                            className="form-control"
+                            placeholder="Enter Your Email"
+                            value={emailId}
+                            onChange={(e) => setEmailId(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="form-group my-2">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter 4 Digit PIN"
+                            value={answer}
+                            onChange={(e) => setAnswer(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="form-group my-2">
+                        <input
+                            type="password"
+                            className="form-control"
+                            placeholder="Enter New Password"
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </Layout>

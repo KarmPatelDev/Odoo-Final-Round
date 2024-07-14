@@ -1,0 +1,122 @@
+.App {
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .profile {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .content {
+    margin: 20px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .profile-button {background-color: #555;}
+
+
+/* search input */
+/* src/Home.css */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #7300ff; /* Adjust the color as needed */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #5a00b3; /* Adjust the hover color as needed */
+  }
+  
+
+/* Home.css or relevant CSS file */
+
+.h1{
+    font-size: x-large;
+    margin-right: 144px;
+    color: #9e0ffd;
+    font-style: italic;
+}
+
+.margin{
+    margin-left: 100px;
+}
+
+.Books_container {
+    display: flex;
+    justify-self: center;
+    padding-top: 26px;
+  }
+  
+.books {
+    margin-left: 10px;
+
+}
+
+.tranding {
+    width: "50%";
+}
+  

@@ -1,0 +1,83 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b890f9;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 50px; /* Adjust width as per your design */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional: Adjust spacing */
+    border-radius: 50%; /* Optional: Round the corners if needed */
+    border: 2px solid #fff; /* Optional: Add a border around the logo */
+  }
+
+/* UserLogo.css */
+
+  .user-logo {
+    width: 40px; /* Adjust size as per your design */
+    height: 40px; /* Adjust size as per your design */
+    border-radius: 50%; /* Rounded shape */
+    background-color: #333; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Adjust font size */
+    color: #fff; /* Text color */
+  }
+  
+  .initials {
+    font-weight: bold; /* Optional: Adjust font weight */
+  }
+  
+  
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-name {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}

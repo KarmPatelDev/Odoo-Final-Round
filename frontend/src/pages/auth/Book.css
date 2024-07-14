@@ -1,0 +1,86 @@
+/* src/Book.css */
+
+.book {
+    display: flex;
+    /* margin-bottom: 20px; */
+    /* padding: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+    max-width: 800px;
+    /* Adjust width as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.book-thumbnail {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.book-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.book-details p.authors,
+.book-details p.categories {
+    font-size: 14px;
+    color: #888;
+}
+
+.book-span {
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+.search-container button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}

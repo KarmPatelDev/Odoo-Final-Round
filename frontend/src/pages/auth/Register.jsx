@@ -4,7 +4,7 @@ import axios from "axios";
 import { useAuth } from "../../context/Auth";
 import { toast } from 'react-toastify';
 import Layout from "../../components/layouts/Layout";
-import '../../styles/auth.css'; // Import the CSS file (same as for the Login component)
+import './Login-Register.css'; // Import the CSS file (same as for the Login component)
 
 const Register = () => {
     const [name, setName] = useState("");
@@ -46,6 +46,7 @@ const Register = () => {
     };
 
     return (
+        <Layout title={'Register'}>
             <div className="login">
                 <form className="login__form" onSubmit={handleSubmit}>
                     <h4 className="login__title">Register Page</h4>
@@ -72,13 +73,14 @@ const Register = () => {
                             <input type="text" className="login__input" placeholder="Enter 4 Digit PIN" value={answer} onChange={(e) => setAnswer(e.target.value)} required/>
                         </div>
                     </div>
-                    <button type="submit" className="login__button">Register</button>
+                    <button type="submit" className="login__button btn btn-primary">Register</button>
                     <div className="login__register">
                         <p>Already registered?</p>
                         <button type="button" className="btn btn-secondary" onClick={() => navigate("/login")}>Login</button>
                     </div>
                 </form>
             </div>
+        </Layout>
     );
 };
 

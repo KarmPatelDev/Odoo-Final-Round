@@ -5,8 +5,8 @@ import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import PrivateRoute from './components/routes/PrivateRoute';
-import LibrarianPrivateRoute from './components/routes/LibrarianPrivateRoute';
 import AdminPrivateRoute from './components/routes/AdminPrivateRoute';
+import LibrarianPrivateRoute from './components/routes/LibrarianPrivateRoute';
 
 function App() {
   return (
@@ -19,17 +19,16 @@ function App() {
 
       <Route path="/user" element={<PrivateRoute />} >
         <Route path="home" element={<HomePage />} />
-        
-      </Route>
-
-      <Route path="/librarian" element={<LibrarianPrivateRoute />} >
-        <Route path="home" element={<HomePage />} />
-
       </Route>
 
       <Route path="/admin" element={<AdminPrivateRoute />} >
         <Route path="home" element={<HomePage />} />
       </Route>
+
+      <Route path="/librarian" element={<LibrarianPrivateRoute />} >
+        <Route path="home" element={<HomePage />} />
+      </Route>
+
     </Routes>
     </>
   )

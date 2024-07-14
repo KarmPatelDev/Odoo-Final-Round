@@ -18,13 +18,22 @@
 }
 
 /*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+body,
 input,
 button {
   font-size: var(--normal-font-size);
   font-family: var(--body-font);
 }
 
+body {
+  color: var(--white-color);
+}
 
 input,
 button {
@@ -32,6 +41,14 @@ button {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /*=============== LOGIN ===============*/
 .login {
@@ -51,7 +68,7 @@ button {
 .login__form {
   position: relative;
   color: black;
-  background-color: rgb(186, 113, 250);
+  background-color: hsla(0, 0%, 10%, 0.1);
   border: 2px solid var(--white-color);
   margin-inline: 1.5rem;
   padding: 2.5rem 1.5rem;
@@ -84,7 +101,7 @@ button {
   width: 100%;
   padding-block: 0.8rem;
   background: none;
-  color:var(--white-color);
+  color: var(--white-color);
   position: relative;
   z-index: 1;
 }
@@ -143,7 +160,6 @@ button {
 }
 .login__register {
   text-align: center;
-  margin-top: 1rem;
 }
 .login__register a {
   color: rgb(122, 3, 213);
@@ -163,16 +179,6 @@ button {
 .login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
   top: -12px;
   font-size: var(--small-font-size);
-}
-
-.for-btn{
-  align-self: center;
-  color: white;
-}
-
-.reg-btn{
-  align-self: center;
-  color: white;
 }
 
 /*=============== BREAKPOINTS ===============*/
